@@ -19,19 +19,11 @@ class UsersController < ApplicationController
   def show
     @users = User.find(params[:id])
   end
-  
+
   #編集に対するアクション
 
   def edit
     @user = User.find(params[:id])
-  end
-
-
-
-  #削除に対するアクション
-  def destroy
-    user = User.find(params[:id])
-    user.delete
   end
 
   #更新に対するアクション
@@ -39,6 +31,14 @@ class UsersController < ApplicationController
     user = User.find(params[:id])
     user.update(user_params)
   end
+
+  #削除に対するアクション
+  def destroy
+    user = User.find(params[:id])
+    user.delete
+  end
+
+
 
   private
 
