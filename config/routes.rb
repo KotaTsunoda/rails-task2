@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+
   #一覧画面へのルーティング
   get "/users", to:"users#index"
   #新規投稿画面へのルーティング
@@ -11,4 +12,5 @@ Rails.application.routes.draw do
   patch "/users/:id", to: "users#update"
   #削除を行うためのルーティング
   delete "/users/:id", to: "users#destroy"
+  
 end
