@@ -1,4 +1,5 @@
 class UsersController < ApplicationController
+  
   #一覧画面に対するアクション
   def index
     @users = User.all
